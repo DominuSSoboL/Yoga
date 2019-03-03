@@ -1,0 +1,23 @@
+/* Fonts mixins */
+.font (@font, @size, @weight: 400, @style: normal){
+	font-family: @font, sans-serif;
+	font-size: @size;
+	font-weight: @weight;
+	font-style: @style;
+}
+/** Flex **/
+.display-flex() {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+/** Transformations **/
+.transition(@time: 0.3s, @bezier: ease-out, @style: all){
+	-webkit-transition: @style @time @bezier;
+	-moz-transition: @style @time @bezier;	
+	-o-transition: @style @time @bezier;
+	transition: @style @time @bezier;
+}
+

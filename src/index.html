@@ -5,14 +5,164 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Yoga</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
+    
 </head>
 <body>
    
+   <!-- Header -->
+   <header class="page-header">
+       <div class="container">
+           <!-- Page menu -->
+            <nav id="navbar" class="navbar">
 
+                <!-- Show in mobile and tablet -->
+                <div class="navbar-header "> 
+                    <!-- Logo -->
+                    <div class="navbar-header_logo">
+                        <a href="#">
+                            <img src="img/Logo.png" alt="Yoga">
+                            <span>yoga</span>
+                        </a>
+                    </div>
+                    <!-- Button burger for mobile menu -->
+                    <a class="navbar-header_burger" href="#"><span></span></a>
+                </div>
+            
+            
+                <!-- Show in desktop -->
+                <div class="navbar-menu">
+                    <!-- Left menu section -->
+                    <div class="navbar-menu__left">
+                        <ul>
+                            <li><a class="active" href="#aboutUs">About us</a></li>
+                            <li><a href="#reservation">Reservation</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+                        </ul>
+                    </div>
+                    <!-- Right menu section -->
+                    <div class="navbar-menu__right">
+                        <ul>
+                            <li><a href="#blog">Blog</a></li>
+                            <li><a href="#elements">Elements</a></li>
+                            <li><a href="#shop">Shop</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+       </div>
+   </header>
+
+   <main>
+       <!-- Slider -->
+       <section class="slider">
+            <div class="container">
+
+                <div class="slider-left-cln">
+                    <!-- Contact form -->
+                    <div class="slider-contact-form">
+                        <form id="contactForm" data-toggle="validator" class="shake">
+
+                            <p>Trial Class</p>
+
+                            <!-- Name -->
+                            <div class="form-group">
+                                <input type="text" id="name" placeholder="Enter your name" required data-error="Вы не указали имя.">
+                                <!-- <div class="help-block with-errors"></div> -->
+                            </div>
+                                        
+                            <!-- Phone -->
+                            <div class="form-group">
+                                <input type="tel" id="phone" placeholder="Enter your phone" required data-error="Укажите телефон.">
+                                <!-- <div class="help-block with-errors"></div> -->
+                            </div>
+                    
+                            <!-- Select -->
+                            <div class="form-group">
+                                <select name="" id="selectForm">
+                                    <option value="">Chose your class</option>
+                                    <option value="Ashtanga Vinyasa">Ashtanga Vinyasa</option>
+                                    <option value="Bikram yoga">Bikram yoga</option>
+                                    <option value="Wini yoga">Wini yoga</option>
+                                    <option value="Jivamukti yoga">Jivamukti yoga</option>
+                                </select>
+                                
+                                <!-- <div class="help-block with-errors"></div> -->
+                            </div>
+                                        
+                            <div class="form-button">
+                                <button type="submit" id="submitForm">Try it</button>
+                            </div>
+                                    
+                        </form>
+                    </div>
+                </div>
+
+                <div class="slider-right-cln">
+                    <!-- Title -->
+                    <div class="slider-title">
+                        <h1>Just Balance<br> your Mind & Body </h1>
+                        <p class="subtitle">Create the healthy living<br> for yourself</p>
+                    </div>
+                </div>
+
+                <!-- Slider modal in mobile -->
+                <div class="slider-modal">
+                    <!-- Open modal button -->
+                    <button class="openSliderModal">Try it</button>
+
+                    <!-- Modal -->
+                    <div class="contact-modal" id="sliderModal">
+                        <form id="contactFormModal" data-toggle="validator" class="shake">
+                            <p>Trial Class</p>
+        
+                            <!-- Name -->
+                            <div class="form-group">
+                                <input type="text" id="nameFormModal" placeholder="Enter your name" required data-error="Вы не указали имя.">
+                                <!-- <div class="help-block with-errors"></div> -->
+                            </div>
+                                                
+                            <!-- Phone -->
+                            <div class="form-group">
+                                <input type="tel" id="phoneFormModal" placeholder="Enter your phone" required data-error="Укажите телефон.">
+                                <!-- <div class="help-block with-errors"></div> -->
+                            </div>
+                            
+                            <!-- Select -->
+                            <div class="form-group">
+                                <select name="" id="selectFormModal">
+                                    <option value="">Chose your class</option>
+                                    <option value="Ashtanga Vinyasa">Ashtanga Vinyasa</option>
+                                    <option value="Bikram yoga">Bikram yoga</option>
+                                    <option value="Wini yoga">Wini yoga</option>
+                                    <option value="Jivamukti yoga">Jivamukti yoga</option>
+                                </select>
+                                       
+                                <!-- <div class="help-block with-errors"></div> -->
+                            </div>
+                                               
+                            <div class="form-button">
+                                <button type="submit" id="submitFormModal">Try it</button>
+                            </div>
+                                            
+                        </form>
+                    </div>
+                </div>
+               
+            </div>
+       </section>
+
+        <section style="height: 1000px;background-color: #ccf;">
+    
+        </section>
+
+   </main>
 
    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <!-- Validator -->
+   <!-- <script src="js/validator.min.js"></script> -->
    <!-- Theme scripts -->
    <script src="js/main.js"></script>
 </body>
