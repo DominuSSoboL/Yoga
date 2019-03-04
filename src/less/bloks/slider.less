@@ -8,7 +8,6 @@ section.slider {
     background-size: cover;
     background-position: center;
 }
-
 section.slider .container {
     .display-flex();
     height: 100%;
@@ -40,6 +39,8 @@ section.slider .container {
         padding: 20px 40px 35px 30px;
         background-color: #fff;
         border-radius: 20px;
+        box-shadow: 8px 0px 10px rgba(0,0,0,0.15);
+        
         // Contact form
         form {
             .display-flex();
@@ -48,7 +49,6 @@ section.slider .container {
             -webkit-flex-direction: column;
             -ms-flex-direction: column;
             flex-direction: column;
-
             p {
                 .font('OpenSans', 25px, 600);
                 text-align: left;
@@ -109,9 +109,7 @@ section.slider .container {
 **************************************************************/
 .slider-right-cln {
     padding-left: 45px;
-
     flex:1;
-
     -webkit-flex-basis: 50%;
 	-ms-flex-preferred-size: 50%;
     flex-basis: 50%;
