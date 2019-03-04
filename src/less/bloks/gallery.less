@@ -1,0 +1,193 @@
+/**************************************************************
+*                                                             *
+*                         GALLERY AREA                        *
+*                                                             *
+**************************************************************/
+.gallery-area {
+    padding: 0;
+    margin: 0;
+
+    display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+    display: flex;
+    
+    -webkit-flex-flow: wrap;
+	-ms-flex-flow: wrap;
+    flex-flow: wrap;
+    
+    li {
+        position: relative;
+        list-style: none;
+        width: 25%;
+        height: 300px;
+        overflow: hidden;
+        // IMG
+        img {
+            height: 300px;
+            width: 100%;
+        }
+        // LINK TO DATAL
+        .link-to-detail {
+            display: none;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(91, 108, 235, 0.8);
+        }
+        .link-to-detail:hover {
+            cursor: pointer;
+
+            .link-to-detail-icon {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                background-color: #fff;
+                border-radius: 50%;
+                box-sizing: border-box;
+                padding-top: 12px;
+                width: 40px;
+                height: 40px;
+                text-align: center;
+
+                -moz-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                -webkit-transform:translate(-50%, -50%);
+                -o-transform: translate(-50%, -50%);
+                transform:translate(-50%, -50%);
+            }
+        }
+    }
+}
+/**************************************************************
+*                                                             *
+*                    GALLERY AREA MODAL                       *
+*                                                             *
+**************************************************************/
+// SHOW MODAL
+.galleryModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    text-align: center;
+
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform:translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform:translate(-50%, -50%);
+
+    .gallary-box-decor {
+        background-color: #fff;
+        position: relative;
+
+        .close-gallery-modal {
+            height: 25px;
+            border-radius: 50%;
+            background-color: #fff;
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+    }
+}
+.galleryModal-bg {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 99;
+    background-color: rgba(0,0,0,0.7);
+}
+
+/**************************************************************
+*                                                             *
+*                         RESPONSIVE                          *
+*                                                             *
+**************************************************************/
+@media screen and (max-width: 1800px) {
+    /*GALLERY AREA */
+    .gallery-area {
+        li {
+            height: 280px;
+            img {
+                height: 280px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1600px) {
+    /*GALLERY AREA */
+    .gallery-area {
+        li {
+            height: 250px;
+            img {
+                height: 250px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1200px) {
+    /*GALLERY AREA */
+    .gallery-area {
+        li {
+            height: 200px;
+            img {
+                height: 200px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 992px) {
+    /*GALLERY AREA */
+    .gallery-area {
+        li {
+            width: 50%;
+            height: 300px;
+            // IMG
+            img {
+                height: 300px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    /*GALLERY AREA */
+    .gallery-area {
+        li {
+            width: 100%;
+            height: 340px;
+            // IMG
+            img {
+                height: 340px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 400px) {
+    /*GALLERY AREA */
+    .gallery-area {
+        li {
+            width: 100%;
+            height: 230px;
+            // IMG
+            img {
+                height: 230px;
+            }
+        }
+    }
+}

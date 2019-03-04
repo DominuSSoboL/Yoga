@@ -59,3 +59,45 @@ $(document).ready(function(){
         });
     });
 });
+
+
+// Gallery
+$(document).ready(function(){
+    
+
+    // Show link to detal
+    $('.image-zoom').fadeOut();
+
+    $('.gallery-item').hover(
+        function(){ 
+            if ( $(window).width() > 600 ) {
+                $( this ).children('div.link-to-detail').fadeIn(200);
+            }
+        },
+        function(){ 
+            if ( $(window).width() > 600 ) {
+                $( this ).children('div.link-to-detail').fadeOut(200); 
+            }
+        }
+    );
+
+    // Show modal
+    
+    $('.galleryModal-bg').click(function(){
+        $('.galleryModal').fadeOut(200);
+        $(this).fadeOut(200);
+    });
+
+    $('.close-gallery-modal').click(function(){
+        $('.galleryModal').fadeOut(200);
+        $('.galleryModal-bg').fadeOut(200);
+    });
+
+    $('div.link-to-detail').click(function(){
+
+        const imgUrl = $(this).data('imgurl');
+        $('.galleryModal .gallary-box-decor img').attr('src', imgUrl);
+        $('.galleryModal').fadeIn(200);
+        $('.galleryModal-bg').fadeIn(200);
+    });
+});
