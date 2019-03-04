@@ -12,7 +12,13 @@ $(document).ready(function(){
     $('a.navbar-header_burger').click(function(e){
 		e.preventDefault();
         $(this).toggleClass('navbar__button-burger--active');
-        $('.navbar-menu.navbar-menu--collapse').toggleClass('navbar-menu--active');
+        var trans =  $('.navbar-menu').css('transform');
+
+        if (trans == 'matrix(1, 0, 0, 0, 0, 0)'){
+            $('.navbar-menu').css('transform', 'scaleY(1)');
+        } else {
+            $('.navbar-menu').css('transform', 'scaleY(0)');
+        }
     });
     
     // Add collaps class for menu
@@ -20,9 +26,11 @@ $(document).ready(function(){
         if ( $(window).width() < 992 ) {
             $('.navbar-header').addClass('navbar-header--collapse');
             $('.navbar-menu').addClass('navbar-menu--collapse');
+            $('.navbar-menu').css('transform', 'scaleY(0)');
         } else {
             $('.navbar-header').removeClass('navbar-header--collapse');
             $('.navbar-menu').removeClass('navbar-menu--collapse');
+            $('.navbar-menu').css('transform', 'scaleY(1)');
         }
     }
     $(window).resize(function() {
@@ -36,12 +44,18 @@ $(document).ready(function(){
 
 // Slider
 $(document).ready(function(){
+
     // Add paddign top for slider section
     const headerHeight = $('header.page-header').height();
     $('section.slider').css('paddingTop', headerHeight);
-   
-	$('#openSliderModal').click(function(){
-		$('.contact-modal').addClass('modal-active');
-	});
 
+    $('.openSliderModal').click(function(){
+        $('.contact-modal').addClass('active-modal');
+        $('.bg-contact-modal').fadeIn();
+
+        $('.bg-contact-modal').click(function(){
+            $('.contact-modal').removeClass('active-modal');
+            $('.bg-contact-modal').fadeOut();
+        });
+    });
 });

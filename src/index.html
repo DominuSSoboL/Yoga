@@ -62,7 +62,7 @@
                 <div class="slider-left-cln">
                     <!-- Contact form -->
                     <div class="slider-contact-form">
-                        <form id="contactForm" data-toggle="validator" class="shake">
+                        <form id="contactForm">
 
                             <p>Trial Class</p>
 
@@ -74,13 +74,13 @@
                                         
                             <!-- Phone -->
                             <div class="form-group">
-                                <input type="tel" id="phone" placeholder="Enter your phone" required data-error="Укажите телефон.">
+                                <input type="tel" id="phone" placeholder="Enter your phone" required data-error="Укажите телефон." maxlength='15'>
                                 <!-- <div class="help-block with-errors"></div> -->
                             </div>
                     
                             <!-- Select -->
                             <div class="form-group">
-                                <select name="" id="selectForm">
+                                <select required>
                                     <option value="">Chose your class</option>
                                     <option value="Ashtanga Vinyasa">Ashtanga Vinyasa</option>
                                     <option value="Bikram yoga">Bikram yoga</option>
@@ -107,48 +107,46 @@
                     </div>
                 </div>
 
-                <!-- Slider modal in mobile -->
-                <div class="slider-modal">
-                    <!-- Open modal button -->
-                    <button class="openSliderModal">Try it</button>
 
-                    <!-- Modal -->
-                    <div class="contact-modal" id="sliderModal">
-                        <form id="contactFormModal" data-toggle="validator" class="shake">
-                            <p>Trial Class</p>
-        
-                            <!-- Name -->
-                            <div class="form-group">
-                                <input type="text" id="nameFormModal" placeholder="Enter your name" required data-error="Вы не указали имя.">
-                                <!-- <div class="help-block with-errors"></div> -->
-                            </div>
-                                                
-                            <!-- Phone -->
-                            <div class="form-group">
-                                <input type="tel" id="phoneFormModal" placeholder="Enter your phone" required data-error="Укажите телефон.">
-                                <!-- <div class="help-block with-errors"></div> -->
-                            </div>
-                            
-                            <!-- Select -->
-                            <div class="form-group">
-                                <select name="" id="selectFormModal">
-                                    <option value="">Chose your class</option>
-                                    <option value="Ashtanga Vinyasa">Ashtanga Vinyasa</option>
-                                    <option value="Bikram yoga">Bikram yoga</option>
-                                    <option value="Wini yoga">Wini yoga</option>
-                                    <option value="Jivamukti yoga">Jivamukti yoga</option>
-                                </select>
-                                       
-                                <!-- <div class="help-block with-errors"></div> -->
-                            </div>
-                                               
-                            <div class="form-button">
-                                <button type="submit" id="submitFormModal">Try it</button>
-                            </div>
+                <button class="openSliderModal">Try it</button>
+
+                <!-- Modal -->
+                <div class="contact-modal" id="sliderModal">
+                    <form id="contactFormModal">
+                        <p>Trial Class</p>
+    
+                        <!-- Name -->
+                        <div class="form-group">
+                            <input type="text" id="nameFormModal" placeholder="Enter your name" required data-error="Вы не указали имя." />
+                            <!-- <div class="help-block with-errors"></div> -->
+                        </div>
                                             
-                        </form>
-                    </div>
+                        <!-- Phone -->
+                        <div class="form-group">
+                            <input type="text" id="phoneFormModal" placeholder="Enter your phone" required data-error="Укажите телефон."/>
+                            <!-- <div class="help-block with-errors"></div> -->
+                        </div>
+                        
+                        <!-- Select -->
+                        <div class="form-group">
+                            <select required>
+                                <option value="">Chose your class</option>
+                                <option value="Ashtanga Vinyasa">Ashtanga Vinyasa</option>
+                                <option value="Bikram yoga">Bikram yoga</option>
+                                <option value="Wini yoga">Wini yoga</option>
+                                <option value="Jivamukti yoga">Jivamukti yoga</option>
+                            </select>
+                                   
+                            <!-- <div class="help-block with-errors"></div> -->
+                        </div>
+                                           
+                        <div class="form-button">
+                            <button type="submit" id="submitFormModal">Try it</button>
+                        </div>
+                                        
+                    </form>
                 </div>
+                <div class="bg-contact-modal"></div>
                
             </div>
        </section>
@@ -161,8 +159,6 @@
 
    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-   <!-- Validator -->
-   <!-- <script src="js/validator.min.js"></script> -->
    <!-- Theme scripts -->
    <script src="js/main.js"></script>
 </body>

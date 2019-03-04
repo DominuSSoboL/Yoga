@@ -300,9 +300,6 @@ header.page-header {
 .navbar-stick .navbar-menu.navbar-menu--collapse {
     margin-top: 0px;
 }
-.navbar-menu.navbar-menu--collapse.navbar-menu--active {
-    transform: scale(1);
-}
 .navbar-menu.navbar-menu--collapse,
 .navbar-menu--collapse .navbar-menu__left,
 .navbar-menu--collapse .navbar-menu__right {
@@ -378,6 +375,7 @@ header.page-header {
     /* Navbar */
     #navbar {
         position: inherit;
+
     }
     
     /* Navbar header */
@@ -389,6 +387,13 @@ header.page-header {
     }
 
     /* Navbar menu */
+    .navbar-menu {
+        -moz-transform: scaleY(0);
+        -ms-transform: scaleY(0);
+        -webkit-transform: scaleY(0);
+        -o-transform: scaleY(0);
+        transform: scaleY(0);
+    }
     .navbar-menu--collapse .navbar-menu__left,
     .navbar-menu--collapse .navbar-menu__right {
         max-width: 720px;

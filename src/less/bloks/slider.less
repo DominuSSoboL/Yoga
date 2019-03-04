@@ -63,13 +63,18 @@ section.slider .container {
                 border-radius: 8px; 
                 border: none;
                 background-color: #f2f2f2;
+                color: #888888;
+                &::-webkit-input-placeholder {color:#888888;}
+                &::-moz-placeholder          {color:#888888;}
+                &:-moz-placeholder           {color:#888888;}
+                &:-ms-input-placeholder      {color:#888888;}
             }
             .form-group select {
                 -webkit-appearance: none;
                 -moz-appearance: none;
                 -ms-appearance: none;
                 appearance: none;
-                background:#f2f2f2 url('path/img.png') no-repeat right center;
+                background:#f2f2f2 url('../../img/slider/select-tn.png') no-repeat right 15px center;
             }
             .form-group input:hover,
             .form-group select:hover,
@@ -127,114 +132,128 @@ section.slider .container {
 *                          MODAL                              *
 *                                                             *
 **************************************************************/
-.slider-modal {
+/* Button open modal */
+button.openSliderModal {
     display: none;
-    // OPEN MODAL BUTTON
-    button.openSliderModal {
-        .font('OpenSans', 16px, 700);
-        text-transform: uppercase;
-        line-height: 16px;
-        padding: 10px 25px;
-        border: 1px solid #fff;
-        border-radius: 8px;
-        color: #fff;
-        background-color: transparent;
+    .font('OpenSans', 16px, 700);
+    text-transform: uppercase;
+    line-height: 16px;
+    padding: 10px 25px;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    color: #fff;
+    background-color: transparent;
 
-        .transition();
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;	
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 
-        &:hover,
-        &:focus {
-            background-color: rgba(255,255,255,0.2);
-            outline: none;
-            .transition();
-        }
-    }
-    // MODAL CONTENT
-    .contact-modal {
-        display: none;
-        width: 100%;
-        min-height: 100%;
-        background-color: rgba(0,0,0,0.5);
-        position: fixed;
-        top: 0px;
-        left: 0;
-        
-        transition: all 0.6s;
-
-        // Contact form
-        form {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            max-width: 300px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 20px;
-            text-align: center;
-
-            .display-flex();
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -webkit-flex-direction: column;
-            -ms-flex-direction: column;
-            flex-direction: column;
-
-            -moz-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            -webkit-transform:translate(-50%, -50%);
-            -o-transform: translate(-50%, -50%);
-            transform:translate(-50%, -50%);
-
-            p {
-                .font('OpenSans', 25px, 600);
-                
-                color: #5363db;
-            }
-            .form-group input,
-            .form-group select {
-                margin-bottom: 18px;
-                padding: 18px 10px;
-                box-sizing: border-box;
-                min-width: 230px;
-                border-radius: 8px; 
-                border: none;
-                background-color: #f2f2f2;
-            }
-            .form-group select {
-                -webkit-appearance: none;
-                -moz-appearance: none;
-                -ms-appearance: none;
-                appearance: none;
-                background:#f2f2f2 url('path/img.png') no-repeat right center;
-            }
-            .form-group input:hover,
-            .form-group select:hover,
-            .form-group input:focus,
-            .form-group select:focus {
-                outline: none;
-            }
-            .form-button {
-                button {
-                    .font('OpenSans', 16px, 700);
-                    line-height: 16px;                    
-                    width: 170px;
-                    padding: 18px 0;
-                    border: none;
-                    border-radius: 8px;
-                    color: #fff;
-                    background-color: #5b6ceb;
-                }
-                -webkit-appearance: none;
-                -moz-appearance: none;
-                -ms-appearance: none;
-                appearance: none;
-            }
-        }
-    }
-    .contact-modal.modal-active {
-        display: block;
+    &:hover,
+    &:focus {
+        background-color: rgba(255,255,255,0.2);
+        outline: none;
+        -webkit-transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out;	
+        -o-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
     }
 }
+.bg-contact-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 99;
+    background-color: rgba(0,0,0,0.7);
+}
+// MODAL CONTENT
+.contact-modal {
+    display: none;
+
+    // Contact form
+    form {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        z-index: 100;
+        max-width: 300px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 20px;
+        text-align: center;
+
+        .display-flex();
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -webkit-transform:translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform:translate(-50%, -50%);
+        
+
+        p {
+            .font('OpenSans', 25px, 600);
+            
+            color: #5363db;
+        }
+        .form-group input,
+        .form-group select {
+            margin-bottom: 18px;
+            padding: 18px 10px;
+            box-sizing: border-box;
+            min-width: 230px;
+            border-radius: 8px; 
+            border: none;
+            background-color: #f2f2f2;
+            color: #888888;
+            &::-webkit-input-placeholder {color:#888888;}
+            &::-moz-placeholder          {color:#888888;}
+            &:-moz-placeholder           {color:#888888;}
+            &:-ms-input-placeholder      {color:#888888;}
+        }
+        .form-group select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            appearance: none;
+            background:#f2f2f2 url('../../img/slider/select-tn.png') no-repeat right 10px center;
+        }
+        .form-group input:hover,
+        .form-group select:hover,
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+        }
+        .form-button {
+            button {
+                .font('OpenSans', 16px, 700);
+                line-height: 16px;                    
+                width: 170px;
+                padding: 18px 0;
+                border: none;
+                border-radius: 8px;
+                color: #fff;
+                background-color: #5b6ceb;
+            }
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            appearance: none;
+        }
+    }
+}
+/* Open modal class */
+.contact-modal.active-modal {
+    display: block;
+ }
 /**************************************************************
 *                                                             *
 *                        RESPONSIVE                           *
@@ -288,6 +307,7 @@ section.slider .container {
 
 @media screen and (max-width: 992px){
 
+    /* GENERAL STYLES */
     section.slider .container {
         padding: 20px 0 60px;
         text-align: center;
@@ -320,7 +340,70 @@ section.slider .container {
         }
     }
     /** MODAL **/
-    .slider-modal {
+
+    button.openSliderModal {
         display: block;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+
+    /* RIGHT SECTION */
+    .slider-right-cln {
+        .slider-title {
+            h1 { 
+                font-size: 25px; 
+                line-height: 35px;
+                margin-bottom: 0px;
+            }
+            .subtitle {
+                font-size: 25px;
+                line-height: 30px;
+                margin-top: 0px;
+                letter-spacing: 1.5px;
+            }
+        }
+    }
+    /** MODAL **/
+    /* Button open modal */
+    button.openSliderModal {
+        display: block;
+        font-size: 14px;
+        line-height: 14px;
+        padding: 8px 20px;
+    }
+    // MODAL CONTENT
+    .contact-modal {
+        form {
+            max-width: 300px;
+            padding: 10px;
+            border-radius: 10px;
+            p {
+                font-size: 18px;
+            }
+            .form-group input,
+            .form-group select {
+                margin-bottom: 18px;
+                padding: 9px 10px;
+                border-radius: 4px; 
+            }
+            .form-button {
+                button {
+                    font-size: 14px;
+                    line-height: 14px;                    
+                    width: 90px;
+                    padding: 12px 0;
+                    border: none;
+                    border-radius: 8px;
+                    color: #fff;
+                    background-color: #5b6ceb;
+                }
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                -ms-appearance: none;
+                appearance: none;
+            }
+        }
     }
 }
