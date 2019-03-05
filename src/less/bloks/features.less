@@ -1,0 +1,180 @@
+/**************************************************************
+*                                                             *
+*                       GLOBAL STYLES                         *
+*                                                             *
+**************************************************************/
+.features {
+    padding: 125px 0;
+    text-align: center;
+    background: url('../../img/fatures/features-bg.jpg')no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    .container {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+
+        -webkit-flex-flow: wrap;
+        -ms-flex-flow: wrap;
+        flex-flow: wrap;
+        .features-item {
+            margin-bottom: 40px;
+
+            -webkit-flex-basis: 25%;
+            -ms-flex-preferred-size: 25%;
+            flex-basis: 25%;
+            h3 {
+                .font('OpenSans', 18px, 700);
+                line-height: 27px;
+                margin: 0;
+            }
+            p {
+                .font('OpenSans', 16px, 400);
+                padding: 0 10px;
+            }
+        }
+    }
+}
+/**************************************************************
+*                                                             *
+*                           ICONS                             *
+*                                                             *
+**************************************************************/
+/** ICONS **/
+.sprite {
+    background-image: url('../../img/fatures/icons/feature-sprite.png');
+    background-repeat: no-repeat;
+    display: block;
+    margin: auto;
+    margin-bottom: 25px;
+}
+.sprite-1 {
+    width: 70px;
+    height: 70px;
+    background-position: -5px -5px;
+}
+.sprite-2 {
+    width: 70px;
+    height: 70px;
+    background-position: -85px -5px;
+}
+.sprite-3 {
+    width: 70px;
+    height: 70px;
+    background-position: -5px -85px;
+}
+.sprite-4 {
+    width: 70px;
+    height: 70px;
+    background-position: -85px -85px;
+}
+.sprite-5 {
+    width: 70px;
+    height: 70px;
+    background-position: -165px -5px;
+}
+.sprite-6 {
+    width: 70px;
+    height: 70px;
+    background-position: -165px -85px;
+}
+.sprite-7 {
+    width: 70px;
+    height: 70px;
+    background-position: -5px -165px;
+}
+.sprite-8 {
+    width: 70px;
+    height: 70px;
+    background-position: -85px -165px;
+}
+
+/**************************************************************
+*                                                             *
+*                         RESPONSIVE                          *
+*                                                             *
+**************************************************************/
+@media screen and (max-width: 1200px){
+
+    /*GLOBAL STYLES*/
+    .features {
+        padding: 80px 0;
+    }
+
+}
+@media screen and (max-width: 992px){
+
+    /*GLOBAL STYLES*/
+    .features {
+        padding: 60px 0;
+        .container {
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+
+            .features-item {
+                margin-bottom: 20px;
+                -webkit-flex-basis: 33%;
+                -ms-flex-preferred-size: 33%;
+                flex-basis: 33%;
+
+                h3 {
+                    font-size: 16px;
+                    line-height: 22px;
+                    margin: 0;
+                }
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    /** ICONS **/
+    .sprite {
+        margin-bottom: 10px;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    /*GLOBAL STYLES*/
+    .features {
+        padding: 40px 0;
+        .container { 
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+
+            .features-item {
+                margin-bottom: 10px;
+
+                -webkit-flex-basis: 50%;
+                -ms-flex-preferred-size: 50%;
+                flex-basis: 50%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px){
+    /*GLOBAL STYLES*/
+    .features {
+        .container {
+            .features-item {
+                margin-bottom: 30px;
+
+                -webkit-flex-basis: 100%;
+                -ms-flex-preferred-size: 100%;
+                flex-basis: 100%;
+            }
+            p {
+                width: 90%;
+                margin: auto;
+            }
+        }
+    }
+}
