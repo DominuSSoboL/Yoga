@@ -12,7 +12,7 @@ $(document).ready(function(){
     $('a.navbar-header_burger').click(function(e){
 		e.preventDefault();
         $(this).toggleClass('navbar__button-burger--active');
-        var trans =  $('.navbar-menu').css('transform');
+        const trans =  $('.navbar-menu').css('transform');
 
         if (trans == 'matrix(1, 0, 0, 0, 0, 0)'){
             $('.navbar-menu').css('transform', 'scaleY(1)');
@@ -99,5 +99,38 @@ $(document).ready(function(){
         $('.galleryModal .gallary-box-decor img').attr('src', imgUrl);
         $('.galleryModal').fadeIn(200);
         $('.galleryModal-bg').fadeIn(200);
+    });
+});
+
+
+// ABOUT US SLIDER
+$(document).ready(function(){
+    $('button.next').click(function(){
+        var currImg = $('img.curry');
+        var currentImageIndex = $('.img.curry').index();
+        var nexImageIndex =  currentImageIndex + 1;
+        var nextImage = $('.img').eq(nexImageIndex);
+
+        if(nexImageIndex == ($('.img:last').index() + 1 )){
+            $('.img').eq(0).fadeIn(1000);
+            $('.img').eq(0).addClass('curry');
+        } else {
+            nextImage.fadeIn(1000);
+            nextImage.addClass('curry');
+        }
+        currImg.fadeOut(1000);
+        currImg.removeClass('curry');
+    });
+
+    $('button.prev').click(function(){
+        var currImg = $('img.curry');
+        var currentImageIndex = $('.img.curry').index();
+        var prevImageIndex =  currentImageIndex - 1;
+        var prevImage = $('.img').eq(prevImageIndex);
+
+        currImg.fadeOut(1000);
+        currImg.removeClass('curry');
+        prevImage.fadeIn(1000);
+        prevImage.addClass('curry');
     });
 });
