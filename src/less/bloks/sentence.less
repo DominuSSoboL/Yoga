@@ -1,0 +1,215 @@
+/**************************************************************
+*                                                             *
+*                       GENERAL STYLES                        *
+*                                                             *
+**************************************************************/
+section.sentence {
+    padding: 100px 0 200px;
+    background: url('../../img/sentence/sentence-bg.png')no-repeat;
+    background-position: right bottom;
+    background-size: 60%;
+
+    .container {
+        .price {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+
+            .price-table {
+                margin: 0;
+                padding: 0;
+                border-radius: 0 0 10px 10px;
+
+                box-shadow: 9px 0 50px rgba(0,0,0,0.1);
+                background-color:#fff; 
+
+                -webkit-flex-basis: 32%;
+                -ms-flex-preferred-size: 32%;
+                flex-basis: 32%;
+
+                li {
+                    text-align: center;
+                    list-style: none;
+                }
+                // Title
+                li.price-table-title {
+                    background-color: #5b6ceb;
+                    padding: 50px 0;
+                    margin-bottom: 25px;
+                    border-radius: 10px 10px 0 0;
+                    color: #fff;
+                    .transition();
+
+                    span:first-child {
+                        .font('OpenSans', 32px, 700);
+                        line-height: 32px;
+                    }
+                    span:nth-child(2) {
+                        .font('OpenSans', 67px, 700);
+                        line-height: 67px;
+                    }
+                    span:last-child {
+                        .font('OpenSans', 18px, 700);
+                        line-height: 24px;
+                    }
+                }
+                // Items
+                li.table-item {
+                    .font('OpenSans', 18px, 400);
+                    line-height: 25px;
+                    padding: 20px 0px 25px;
+                    position: relative;
+                }
+                li.dekor::after {
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    display: block;
+                    height: 1px;
+                    width: 30%;
+                    content: '';
+                    clear: both;
+                    border-bottom: 1px solid #d7d7d7;
+
+                    -moz-transform: translateX(-50%);
+                    -ms-transform: translateX(-50%);
+                    -webkit-transform:translateX(-50%);
+                    -o-transform: translateX(-50%);
+                    transform:translateX(-50%);
+                }
+                li.table-item.last {
+                    margin-bottom: 50px;
+                }
+                li.button  {
+                    border-radius: 0 0 10px 10px;
+                    margin-bottom: 50px;
+                    button {
+                        .font('OpenSans', 18px, 600);
+                        line-height: 24px;
+                        padding: 16px 40px;
+                        border: none;
+                        border-radius: 20px;
+                        background-color: #5b6ceb;
+                        color: #fff;
+                        .transition();
+                    }
+                    button:hover,
+                    button:focus {
+                        cursor: pointer;
+                        outline: none;
+                        background-color: rgba(91,108,235,0.8);
+                        .transition();
+                    }
+                }
+            }
+        }
+    }
+}
+/**************************************************************
+*                                                             *
+*                       GENERAL STYLES                        *
+*                                                             *
+**************************************************************/
+@media screen and (max-width: 1200px){
+    section.sentence {
+        padding: 60px 0 120px;
+    }
+}
+
+@media screen and (max-width: 992px){
+    section.sentence {
+        padding: 40px 0 60px;
+        .container {
+            .price {
+    
+                -webkit-box-pack: center;
+                -webkit-justify-content: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+
+                -webkit-flex-flow: wrap;
+                -ms-flex-flow: wrap;
+                flex-flow: wrap;
+    
+                .price-table {
+                    margin: 0 10px 30px;
+    
+                    -webkit-flex-basis: 45%;
+                    -ms-flex-preferred-size: 45%;
+                    flex-basis: 45%;
+    
+                    // Title
+                    li.price-table-title {
+                        padding: 30px 0;
+                        margin-bottom: 20px;
+    
+                        span:nth-child(2) {
+                            font-size: 57px;
+                            line-height: 57px;
+                        }
+                    }
+                    // Items
+                    li.table-item {
+                        font-size: 14px;
+                        padding: 20px 0px 25px;
+                    }
+                    li.button  {
+                        margin-bottom: 40px;
+                        button {
+                            padding: 12px 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    section.sentence {
+        padding: 40px 0 60px;
+        .container {
+            .price {
+                .price-table {
+                    margin: 0 10px 30px;
+    
+                    -webkit-flex-basis: 80%;
+                    -ms-flex-preferred-size: 80%;
+                    flex-basis: 80%;
+    
+                    // Title
+                    li.price-table-title {
+                        padding: 20px 0;
+                        margin-bottom: 10px;
+                        span:first-child {
+                            font-size: 20px;
+                            line-height: 20px;
+                        }
+                        span:nth-child(2) {
+                            font-size: 30px;
+                            line-height: 30px;
+                        }
+                    }
+                    // Items
+                    li.table-item.last {
+                        margin-bottom: 0px;
+                    }
+                    li.button  {
+                        margin-bottom: 20px;
+                        button {
+                            font-size: 14px;
+                            padding: 8px 35px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -134,3 +134,18 @@ $(document).ready(function(){
         prevImage.addClass('curry');
     });
 });
+
+// SENTENCE
+$(document).ready(function(){
+    $('.btn-by-table').hover(
+        function(){
+            var el = $(this).closest('.price-table');
+            el.find('.price-table-title').css('backgroundColor', 'rgba(91,108,235,0.8)');
+        },
+        function(){
+            var el = $(this).closest('.price-table');
+            el.find('.price-table-title').css('backgroundColor', 'rgba(91,108,235,1)');
+        }
+    );
+
+});
