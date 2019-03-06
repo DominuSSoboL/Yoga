@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Yoga</title>
-    
+    <!--Favicon-->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!--Owl carusel-->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!--Styles-->
     <link rel="stylesheet" href="css/style.css">
     
 </head>
@@ -36,19 +39,19 @@
                 <!-- Show in desktop -->
                 <div class="navbar-menu">
                     <!-- Left menu section -->
-                    <div class="navbar-menu__left">
+                    <div class="navbar-menu-items navbar-menu__left">
                         <ul>
-                            <li><a class="active" href="#aboutUs">About us</a></li>
-                            <li><a href="#reservation">Reservation</a></li>
-                            <li><a href="#gallery">Gallery</a></li>
+                            <li class="item-menu"><a href="#aboutUs">About us</a></li>
+                            <li class="item-menu"><a class="active" href="#reservation">Reservation</a></li>
+                            <li class="item-menu"><a href="#gallery">Gallery</a></li>
                         </ul>
                     </div>
                     <!-- Right menu section -->
-                    <div class="navbar-menu__right">
+                    <div class="navbar-menu-items  navbar-menu__right">
                         <ul>
-                            <li><a href="#blog">Blog</a></li>
-                            <li><a href="#elements">Elements</a></li>
-                            <li><a href="#shop">Shop</a></li>
+                            <li class="item-menu"><a href="#blog">Blog</a></li>
+                            <li class="item-menu"><a href="#elements">Elements</a></li>
+                            <li class="item-menu"><a href="#shop">Shop</a></li>
                         </ul>
                     </div>
                 </div>
@@ -58,7 +61,7 @@
 
    <main>
        <!-- Slider -->
-       <section class="slider">
+       <section id="reservation" class="slider">
             <div class="container">
 
                 <div class="slider-left-cln">
@@ -154,7 +157,7 @@
        </section>
 
        <!-- Our classes -->
-       <section class="our-classes">
+       <section id="blog" class="our-classes">
            <div class="container">
                <!--Title-->
                <div class="our-classes-title">
@@ -220,7 +223,7 @@
        </section>
 
        <!-- Gallery -->
-       <section class="gallery">
+       <section id="gallery" class="gallery">
             <ul class="gallery-area">
 
                 <!-- 1 -->
@@ -329,7 +332,7 @@
        </section>
        
        <!-- About US -->
-       <section class="about-us">
+       <section id="aboutUs" class="about-us">
             <div class="container">
 
                 <!-- Left -->
@@ -363,7 +366,7 @@
        </section>
 
        <!-- Features -->
-       <section class="features">
+       <section id="elements" class="features">
            <div class="container">
 
                <!--Item-->
@@ -427,7 +430,7 @@
        </section>
 
        <!--Sentence-->
-       <section class="sentence">
+       <section id="shop" class="sentence">
            <div class="container">
                <!--Price-->
                <div class="price">
@@ -468,9 +471,64 @@
                         <li class="button"><button class="btn-by-table">Buy now</button></li>
                     </ul>
                </div>
-               <!--Bloquotes-->
-               <div class="bloquotes">
+               <!--Reviews-->
+               <div class="reviews">
+                    <div class="reviews-slider">
+                        <div class="owl-carousel owl-theme">
 
+                            <!--Slide 1-->
+                            <div class="slider-item">
+
+                                <!-- AVATAR -->
+                                <div class="avatar">
+                                    <img src="img/reviews-slider/current-avatar.png" alt="">
+                                </div>
+
+                                <!-- DESCRIPTION -->
+                                <div class="descriptions">
+                                    <p class="text">
+                                        <i class="sprite sprite-bq-l"></i>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea commodo consequat.
+                                        <i class="sprite sprite-bq-R"></i>
+                                    </p>
+                                    <p class="position">Trainer</p>
+                                    <p class="name">Laura Shepard</p>
+                                </div>
+                            </div>
+
+                            <!--Slide 2-->
+                            <div class="slider-item">
+                                <!-- AVATAR -->
+                                <div class="avatar">
+                                    <img src="img/reviews-slider/next-avatar.png" alt="">
+                                </div>
+                                <!-- DESCRIPTION -->
+                                <div class="descriptions">
+                                    <p class="text">
+                                        <i class="sprite sprite-bq-l"></i>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea commodo consequat.
+                                        <i class="sprite sprite-bq-R"></i>
+                                    </p>
+                                    <p class="position">Trainer</p>
+                                    <p class="name">Sara Taylor</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!--Next slid-->
+                        <div class="next-slide">
+                            <div class="next-slide-avatar">
+                                <img src="img/reviews-slider/next-avatar.png" alt="">
+                            </div>
+                            <!-- DESCRIPTION -->
+                            <div class="next-slide-descriptions">
+                                <p class="next-slide-name">Sara Taylor</p>
+                                <p class="next-slide-position">Trainer</p>
+                            </div>
+                        </div>
+                        
+                    </div>
                </div>
            </div>
        </section>
@@ -681,8 +739,8 @@
 
    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-   <!--Gallery pretty photo -->
-   <script src="js/gallery.js"></script>
+   <!--Owl carusel-->
+   <script src="js/owl.carousel.min.js"></script>
    <!-- Theme scripts -->
    <script src="js/main.js"></script>
 </body>

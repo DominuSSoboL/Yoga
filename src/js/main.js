@@ -38,6 +38,17 @@ $(document).ready(function(){
     });
     setOptionCollapse();
 
+   
+    // Smooth scrolling of anchor links and toggle active class
+    var $page = $('html, body');
+    $('.item-menu a').click(function() {
+        $('.item-menu a').removeClass('active');
+        $(this).addClass('active');
+        $page.animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 1000);
+        return false;
+    });
     
 });
 
@@ -147,5 +158,42 @@ $(document).ready(function(){
             el.find('.price-table-title').css('backgroundColor', 'rgba(91,108,235,1)');
         }
     );
+});
 
+
+// REVIEWS SLIDER
+$(document).ready(function(){
+    $(function() {
+        // Owl Carousel
+        var owl = $(".owl-carousel");
+        owl.owlCarousel({
+            items: 1,
+            margin: 10,
+            loop: true,
+            nav: true,
+            navText: [
+                '<span class="arrow-owl arrow-left"><svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 512"><path fill="#5b6ceb" d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"></path></svg></span>',
+                '<span class="arrow-owl arrow-right"><svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 512"><path fill="#5b6ceb" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></span>'
+            ]
+        });
+            
+        owl.on('changed.owl.carousel',function(property){
+
+            var current = property.item.index;
+
+            var src = $(property.target).find(".owl-item").eq(current + 1).find("img").attr('src');
+            var position = $(property.target).find(".owl-item").eq(current + 1).find("p.position").text();
+            var nameTrainer = $(property.target).find(".owl-item").eq(current + 1).find("p.name").text();
+            $('.next-slide .next-slide-avatar img').attr('src', src);
+            $('p.next-slide-name').text(nameTrainer);
+            $('p.next-slide-position').text(position);
+        });
+    });
+    $(".next_button").click(function(){
+        owl.trigger("next.owl.carousel");
+    });
+        
+    $(".prev_button").click(function(){
+        owl.trigger("prev.owl.carousel");
+    });
 });

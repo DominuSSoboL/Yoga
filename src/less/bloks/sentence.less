@@ -116,13 +116,306 @@ section.sentence {
 }
 /**************************************************************
 *                                                             *
-*                       GENERAL STYLES                        *
+*                       REVIEWS SLIDER                        *
+*                                                             *
+**************************************************************/
+.reviews-slider {
+    position: relative;
+    margin-top: 100px;
+
+    .owl-carousel {
+        box-shadow: 9px 5px 50px rgba(0,0,0,0.1);
+        background-color: #fff;
+        // Slider items style
+        .slider-item {
+
+            padding-top: 40px;
+
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+
+            // AVATAR
+            .avatar {
+                -webkit-flex-basis: 23%;
+                -ms-flex-preferred-size: 23%;
+                flex-basis: 23%;
+                img {
+                    width: 150px;
+                    height: 150px;
+                    margin: auto;
+                }
+            }
+
+            // DESCRIPTION
+            .descriptions {
+                position: relative;
+                padding: 0 30px;
+
+                -webkit-flex-basis: 77%;
+                -ms-flex-preferred-size: 77%;
+                flex-basis: 77%;
+
+                p.text {
+                    .font('OpenSans', 14px);
+                    font-style: italic;
+                    margin-bottom: 30px;
+                    color: #555555;
+                    .sprite {
+                        position: absolute;
+                        background-image: url('../../img/reviews-slider/sprite.png');
+                        background-repeat: no-repeat;
+                        display: block;
+                    }
+                    
+                    .sprite-bq-R {
+                        bottom: 50px;
+                        right: 30px;
+                        width: 21px;
+                        height: 15px;
+                        background-position: -5px -5px;
+                    }
+                    
+                    .sprite-bq-l {
+                        left: -20px;
+                        top: 15px;
+                        width: 21px;
+                        height: 15px;
+                        background-position: -36px -5px;
+                    }
+                    
+                }
+                p.position {
+                    .font('OpenSans', 14px, 400);
+                    line-height: 22px;
+                    margin: 0;
+                    color: #777777;
+                }
+                p.name {
+                    .font('OpenSans', 16px, 700);
+                    line-height: 22px;
+                    margin: 0;
+                    color: #5b6ceb;
+                }
+            }
+        }
+        // Arrows
+        .owl-nav {
+
+            position: relative;
+            height: 30px;
+            width: 100%;
+
+            button {
+                position: absolute;
+                bottom: -20px;
+                height: 30px;
+                width: 30px;
+                border-radius: 50%;
+                background-color:#fff;
+                box-shadow: 5px 2px 9px rgba(0,0,0,0.1);
+                outline: none;
+                .transition();
+
+                span svg {
+                    padding-top: 5px;
+                }
+                &.owl-prev {
+                    left: 12%;
+                }
+                &.owl-next {
+                    left: 42%;
+                }
+
+                &:hover,
+                &:active {
+                    background-color: #fff;
+                    outline: none;
+                    span svg {
+                        fill: #7482eb;
+                    }
+                }
+            }
+        }
+        // Dots
+        .owl-dots {
+            position: absolute;
+            right: -50px;
+            top: 50%;
+
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -webkit-transform:translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform:translateY(-50%);
+
+            button.owl-dot {
+                display: block;
+                margin-bottom: 18px;
+                border-radius: 50%;
+                border: 1px solid #d7d7d7;
+
+                span {
+                    height: 10px;
+                    width: 10px;
+                    margin: 3px;
+                    background-color: transparent;
+                }
+                &.active {
+                    outline: none;
+                    border: 1px solid #5b6ceb;
+                    span {
+                        background-color: #5b6ceb;
+                    }
+                    
+                }
+            }
+            button.owl-dot:hover,
+            button.owl-dot:active {
+                outline: none;
+            }
+        }
+
+    }
+}
+//NEXT SLIDE
+.next-slide {
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    z-index: 97;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    -moz-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    -webkit-transform:translateY(50%);
+    -o-transform: translateY(50%);
+    transform:translateY(50%);
+    
+    .next-slide-avatar {
+        margin-right: 10px;
+        img {
+            height: 72px;
+            width: 72px;
+        }
+    }
+    .next-slide-descriptions {
+        .next-slide-name {
+            .font('OpenSans', 14px, 700);
+            color: #555555;
+            margin-bottom: 0;
+        }
+        .next-slide-position {
+            .font('OpenSans', 12px, 400);
+            color: #777777;
+            margin-top: 0;
+        }
+    }
+}
+/**************************************************************
+*                                                             *
+*                          RESPONSIVE                         *
 *                                                             *
 **************************************************************/
 @media screen and (max-width: 1200px){
     /** GENERAL STYLES **/
     section.sentence {
         padding: 60px 0 120px;
+    }
+
+    /*REVIEWS SLIDER*/
+    .reviews-slider {
+        margin-top: 50px;
+        .owl-carousel {
+            // Slider items style
+            .slider-item {
+                padding-top: 20px;
+                // AVATAR
+                .avatar {
+                    img {
+                        width: 120px;
+                        height: 120px;
+                    }
+                }
+    
+                // DESCRIPTION
+                .descriptions {
+                    -webkit-flex-basis: 67%;
+                    -ms-flex-preferred-size: 67%;
+                    flex-basis: 67%;
+                    p.text {
+                        margin-bottom: 10px;
+                        .sprite-bq-R {
+                            bottom: 20px;
+                            right: 10px;
+                        }
+                    }
+                    p.name {
+                        font-size: 14px;
+                    }
+                }
+            }
+            // Arrows
+            .owl-nav {
+    
+                position: relative;
+                height: 30px;
+                width: 100%;
+                button {
+                    bottom: -30px;
+                }
+            }
+            // Dots
+            .owl-dots {
+                position: relative;
+                float: right;
+                margin-right: 150px;
+                padding-bottom: 20px;
+    
+                button.owl-dot {
+                    display: inline-block;
+                    margin-bottom: 0;
+                    margin-right: 10px;
+                    border-radius: 50%;
+                    border: 1px solid #d7d7d7;
+    
+                    span {
+                        height: 10px;
+                        width: 10px;
+                        margin: 3px;
+                        background-color: transparent;
+                    }
+                    &.active {
+                        outline: none;
+                        border: 1px solid #5b6ceb;
+                        span {
+                            background-color: #5b6ceb;
+                        }
+                        
+                    }
+                }
+                button.owl-dot:hover,
+                button.owl-dot:active {
+                    outline: none;
+                }
+            }
+    
+        }
+    }
+    //NEXT SLIDE
+    .next-slide {
+        bottom: -15px;
+        .next-slide-avatar {
+            img {
+                height: 62px;
+                width: 62px;
+            }
+        }
     }
 }
 
@@ -182,7 +475,7 @@ section.sentence {
 
     /** GENERAL STYLES **/
     section.sentence {
-        padding: 40px 0 60px;  
+        padding: 40px 0 120px;  
     }
 
     /** PRICE TABLE **/
@@ -217,6 +510,117 @@ section.sentence {
                     font-size: 14px;
                     padding: 8px 35px;
                 }
+            }
+        }
+    }
+
+
+    /*REVIEWS SLIDER*/
+    .reviews-slider {
+        .owl-carousel {
+            // Slider items style
+            .slider-item {
+                padding-top: 20px;
+
+                -webkit-flex-flow: wrap;
+                -ms-flex-flow: wrap;
+                flex-flow: wrap;
+
+                // AVATAR
+                .avatar {
+                    -webkit-flex-basis: 100%;
+                    -ms-flex-preferred-size: 100%;
+                    flex-basis: 100%;
+                    margin-bottom: 40px;
+                    img {
+                        width: 120px;
+                        height: 120px;
+                        margin: auto;
+                    }
+                }
+    
+                // DESCRIPTION
+                .descriptions {
+                    -webkit-flex-basis: 100%;
+                    -ms-flex-preferred-size: 100%;
+                    flex-basis: 100%;
+                    text-align: center;
+                    p.text {
+                        margin-bottom: 30px;
+                        .sprite-bq-R {
+                            bottom: 60px;
+                            right: 5px;
+                        }
+                        
+                        .sprite-bq-l {
+                            left: 5px;
+                            top: -5px;
+                        }
+                        
+                    }
+                    p.name {
+                        font-size: 14px;
+                        margin-bottom: 40px;
+                    }
+                }
+            }
+            // Arrows
+            .owl-nav {
+    
+                position: relative;
+                height: 30px;
+                width: 100%;
+
+                button {
+                    bottom: -20px;
+                    &.owl-prev {
+                        left: 10%;
+                    }
+                    &.owl-next {
+                        left: auto;
+                        right: 10%;
+                    }
+                }
+            }
+            // Dots
+            .owl-dots {
+                display: none;
+            }
+    
+        }
+    }
+    //NEXT SLIDE
+    .next-slide {
+        bottom: -15px;
+        .next-slide-avatar {
+            img {
+                height: 62px;
+                width: 62px;
+            }
+        }
+    }
+    
+    //NEXT SLIDE
+    .next-slide {
+        bottom: -35px;
+        left: 50%;
+        width: 60%;
+
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -webkit-transform:translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform:translateX(-50%);
+        
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        
+        .next-slide-avatar {
+            img {
+                height: 62px;
+                width: 62px;
             }
         }
     }

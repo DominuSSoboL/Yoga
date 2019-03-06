@@ -186,6 +186,19 @@ header.page-header {
                     }         
                 }
             }
+            a.active {
+                color: #5363db;
+                &::before,
+                &::after {
+                    display: block;
+                    -moz-transform: scaleX(1);
+                    -ms-transform: scaleX(1);
+                    -webkit-transform: scaleX(1);
+                    -o-transform: scaleX(1);
+                    transform: scaleX(1);
+                }
+            }
+
         }
     }
 }
@@ -333,10 +346,9 @@ header.page-header {
                 .transition();
 
                 // Decoration line
-                &:before,
-                &:after {
+                &::before,
+                &::after {
                     display: none;
-                    
                 }
             }
         }
